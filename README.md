@@ -1,104 +1,99 @@
 # Spotify Analysis
 
-#### Project Description
+## Project Description
 
-`spotify_analysis` is a Python project that retrieves and cleans data on the top 50 global Spotify tracks, then uses exploratory analysis and visualizations to uncover key audio-feature patterns, genre differences, and artist insights.
+`spotify_analysis` is a simple EDA project using Python libraries such as NumPy, Pandas, Matplotlib and Seaborn to load, clean and explore the 2020 Top 50 global Spotify tracks. The aim of this project is to examine audio characteristics such as danceability, energy and loudness to identify the features that underpin a successful hit.
 
-### Features
+### Table of contents in the notebook:
+1. Project Setup and Data Acquisition
 
-1. **Data Loading & Cleaning:** Import top-50 CSV, drop Unnamed: 0, remove missing/duplicate records.
-2. **Descriptive Stats:** Compute summary stats for audio features; display schema/types.
-3. **Outlier Detection:** Flag IQR outliers and output an outlier table.
-4. **Exploratory Analysis:**
-   - Artist/album hit counts
-   - Top tracks by metric (e.g., danceability, loudness)
-   - Genre distribution
-   - Correlation heatmap
-5. **Genre Comparison:** Contrast danceability, loudness, and acousticness across genres.
-6. **Summary & Insights:** Summarize key findings and recommend next steps for curation and marketing.
+2. Data Loading and Initial Exploration
 
+    2.1 Data Loading & Initial Exploration
+
+    2.2 Inspect DataFrame Summary
+
+    2.3 Summary Statistics for Numeric Audio Features
+
+3. Data Cleaning
+
+    3.1 Check for Missing Values
+
+    3.2 Duplicate Row Check
+
+    3.3 Treating Outliers
+
+4. Exploratory Data Analysis
+
+    4.1 Basic Stats & Structure
+
+    4.2 Artist & Album Checks
+
+    4.3 Track-Level Queries
+
+    4.4 Genre Breakdown
+
+    4.5 Correlation Overview
+
+    4.6 Genre Comparisons
+
+5. Summary & Insights
 ---
-
-# How to use
-
+### How to use:
 1. Clone the repository
 
-        git clone https://github.com/Vabubi/spotify_analysis.git
-
-
+        git clone https://github.com/TuringCollegeSubmissions/jplesk-DS.v3.1.3.5.git
 2. Enter the project folder
 
-        cd spotify_analysis
-
-
-3. Launch Jupyter Notebook
+        cd spotify_project
+3. Activate your environment
 
         jupyter notebook
-
    Then open `Notebooks/spotify_analysis.ipynb` to start analysis.
-
 ---
-
-## Data
-
+### Data:
 - **Source file**: data/spotifytoptracks.csv
 - **Records**: 50 tracks
 - **Features**: 16 columns including:
-  - artist, album, track_name, genre
-  - energy, danceability, loudness, acousticness, etc.
-
+  - 5 Categorical columns: artist, album, track_name, genre
+  - 11 Numeric features: energy, danceability, loudness, acousticness, etc.
 ---
-
-## Project Structure:
-
-· Spotify_project/
+### File Structure:
+- Spotify_project/ The root directory housing project folders and the main README.
 
       data/
       notebooks/
       .gitignore
       README.md
       requirements.txt
-
-· data/
+- data/ Contains the raw dataset file spotifytoptracks.csv with the top-50 tracks.
 
       spotifytoptracks.csv
-
-· notebooks/
+- notebooks/ Holds the interactive analysis notebook (`Spotify_analysis.ipynb`), its checkpoint folder (`.ipynb_checkpoints`), and a PDF export (`Spotify_analysis.pdf`).
 
       .ipynb_checkpoints/
       Spotify_analysis.ipynb
       Spotify_analysis.pdf
 
-· Spotify_project
-
-  The root directory housing project folders and the main README.
-
-· data
-
-  Contains the raw dataset file spotifytoptracks.csv with the top-50 tracks.
-
-· notebooks
-
-  Holds the interactive analysis notebook (`Spotify_analysis.ipynb`), its checkpoint folder (`.ipynb_checkpoints`), and a PDF export (`Spotify_analysis.pdf`).
-
-· .gitignore
+* .gitignore
 
   Specifies files and folders to exclude from version control (caches, envs, checkpoints, IDE/OS junk, etc.).
-
-· requirements.txt
+* requirements.txt
 
   Lists the Python dependencies needed to run the project.
-
-· README.md
+* README.md
 
   Provides the project overview, setup steps, and usage instructions.
-
 ---
+### Prerequisites:
 
-## Contributing
-
+- Python 3.8 or higher
+- pip (Python package installer)
+- Git (to clone the repository)
+- Jupyter Notebook or JupyterLab
+- Project dependencies (install with `pip install -r requirements.txt`)
+---
+### Contributing
 Contributions are welcome!
-
 ## Author
-
 Created by Jokūbas

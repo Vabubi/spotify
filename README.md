@@ -42,7 +42,7 @@
 ### How to use:
 1. Clone the repository
 
-        git clone https://github.com/TuringCollegeSubmissions/jplesk-DS.v3.1.3.5.git
+        git clone https://github.com/Vabubi/spotify.git
 2. Enter the project folder
 
         cd spotify_project
